@@ -3,8 +3,11 @@
 
 
 > 压缩后18KB,Gip压缩后
+
 > 已扩展语言：`Apache`，`Css`，`Html`，`Java`，`Javascript`，`Json`，`Markdown`，`Php`，`Shell`，`Sql`
+
 > 已扩展主题：`light`，`gray`，`blue`，`red`，`dark`
+
 > 语言可自行扩展，主题可自行扩展
 
 ## 使用 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)
