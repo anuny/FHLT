@@ -9,7 +9,7 @@
 
 ## 使用 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)
 
-前端模块化管理,移除了模块的url加载处理,简化了模块的调用。[文档](./doc/validator.md)  [源码](./doc/validator.md)  `5kb`
+
 ```javascript 
 
 // 简单使用

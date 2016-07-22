@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;border:0;}
+body{font:14px/16px Consolas,Microsoft YaHei;background-color:#fff;line-height:18px}
+*html,*body{background-image:url(about:blank);background-attachment:fixed}
+.main{width:620px; margin:10px auto}
+.set{ width:30px; position:fixed; left:50%; top:10px; margin:0 0 0 320px; background:#fff; cursor:pointer;*position:absolute;*top:expression(eval(document.documentElement.scrollTop)+10)}
+#light{ width:30px; height:30px; background:#FFF;  border:#394147 solid 1px;border-radius:50%}
+#gray{ width:30px; height:30px; background:#CCC; border:#394147 solid 1px;border-radius:50%; margin-top:10px}
+#blue{ width:30px; height:30px; background:blue; border:#394147 solid 1px;border-radius:50%; margin-top:10px}
+#red{ width:30px; height:30px; background:#42071C; border:#394147 solid 1px;border-radius:50%; margin-top:10px}
+#dark{ width:30px; height:30px; background:#394147; border:#394147 solid 1px;border-radius:50%; margin-top:10px}
+</style>
+
+</head>
+
+<body>
+<div class="main">
+<pre data-language="java">
+/*
+* Java
+* 高亮测试
+*/
+package com.phua.basic.controller;
+
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * 数据源管理
+ * 
+ * @modificationHistory.  
+ * <ul>
+ * <li>gaodaojiang 2016年6月3日下午12:46:12 TODO</li>
+ * </ul>
+ */
+
+public abstract class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log("Should not be called");
+    if (1 > 5) { // wtf!?
+      return;
+    }
+  }
+}
+</pre>
+
+
+<pre data-language="md">
+Markdown 语法高亮测试
+==
+
+# blockquote 高亮
+------
+> * 整理知识，学习笔记
+> * 发布日记，杂文，所见所想
+> * 撰写发布技术文稿（代码支持）
+> * 撰写发布学术论文（LaTeX 公式支持）
+
+## 插入一张图片
+![妹子不错哟](http://ww2.sinaimg.cn/mw600/c686ebbcjw1f60i9hpax0j20u011hjvt.jpg)
+
+## 插入一个链接
+[链接1][1]
+
+## 再插入一个链接
+[链接2](http://jandan.net/ooxx) 
+------
+### 插入一段代码
+``` javascript
+require('plugins::highlight',function(highlight){
+    var test = document.getElementById('test');
+    var code = test.innerHTML
+    highlight({
+        element:test,
+        style:'{light}',
+        font:'font-size:14px; font-family:Consolas,Microsoft YaHei ',
+        language:'javascript'
+    })  
+})
+```
+
+### 插入原生html
+&lt;div class=demo&gt;
+  &lt;h1&gt;1234456&lt;/h1&gt;
+&lt;/div&gt;
+
+### 加粗一段文字
+**Markdown 是一种方便记忆、书写的纯文本标记语言**
+
+*插入一段斜体文字*
+
+[1]: http://google.com
+
+</pre>
+
+<pre data-language="apache">
+# -
+# apache
+# 高亮测试
+# -
+LoadModule rewrite_module  modules/mod_rewrite.so
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [NC,L]
+
+ExpiresActive On
+ExpiresByType application/x-javascript  "access plus 1 days"
+
+Order Deny,Allow
+Allow from All
+
+&lt;Location /maps/&gt;
+  RewriteMap map txt:map.txt
+  RewriteMap lower int:tolower
+  RewriteCond %{REQUEST_URI} ^/([^/.]+)\.html$ [NC]
+  RewriteCond ${map:${lower:%1}|NOT_FOUND} !NOT_FOUND
+  RewriteRule .? /index.php?q=$1 [NC,L]
+&lt;/Location&gt;
+
+&lt;VirtualHost _default_:80&gt;
+DocumentRoot "F:/www"
+  &lt;Directory "F:/www"&gt;
+    Options -Indexes +FollowSymLinks +ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    Require all granted
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</pre>
+
+<pre data-language="sql">
+/*
+* SQL
+* 高亮测试
+*/
+100
+-- 创建数据库
+CREATE DATABASE database-name
+
+-- 删除数据库
+drop database dbname
+
+-- 创建备份
+USE master
+EXEC sp_addumpdevice 'disk', 'testBack', 'c:\mssql7backup\MyNwind_1.dat'
+
+-- 开始备份
+BACKUP DATABASE pubs TO testBack
+
+-- 创建新表
+create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
+
+-- 删除新表
+drop table tabname
+
+-- 增加一个列
+Alter table tabname add column col type
+
+-- 添加主键
+Alter table tabname add primary key(col)
+
+-- 删除主键
+Alter table tabname drop primary key(col)
+
+-- 创建索引
+create [unique] index idxname on tabname(col….)
+
+-- 删除索引
+drop index idxname
+</pre>
+
+<pre data-language="json">
+/*
+* json
+* 高亮测试
+*/
+
+{
+    "employees": [
+        {
+            "firstName": 100,
+            "lastName": "Gates"
+        },
+        {
+            "firstName": "George",
+            "lastName": "Bush"
+        },
+        {
+            "firstName": "Thomas",
+            "lastName": "Carter"
+        }
+    ]
+}
+</pre>
+
+
+<pre data-language="shell">
+# -
+# shell
+# 高亮测试
+# -
+
+#添加mysql组
+groupadd mysql 
+
+#创建用户mysql并加入到mysql组，不允许mysql用户直接登录系统
+useradd -gm mysql mysql -s /bin/false 
+
+#创建MySQL数据库存放目录
+mkdir -p /data/mysql 
+
+#设置MySQL数据库存放目录权限
+chown -R mysql:mysql /data/mysql 
+
+#创建MySQL安装目录
+mkdir -p /usr/local/mysql 
+
+wget http://www.test.com/mysql.tar.gz
+
+wget ftp://www.test.com/mysql.tar.gz
+ 
+#进入软件包存放目录
+cd /usr/local/src 
+
+#解压
+tar -zxvf mysql-5.6.19.tar.gz 
+
+ #进入目录
+cd mysql-5.6.19
+
+#配置
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql -DSYSCONFDIR=/etc 
+
+#编译&amp;安装
+make &amp; make install
+
+#删除系统默认的配置文件（如果默认没有就不用删除）
+rm -rf /etc/my.cnf 
+
+#保存退出
+:wq! 
+
+#启动
+service mysqld start
+
+#使配置立刻生效
+vi /etc/profile
+
+#把mysql服务加入系统环境变量：在最后添加下面这一行
+export PATH=$PATH:/usr/local/mysql/bin
+
+#保存退出
+:wq!
+
+#使配置立刻生效
+source /etc/profile  
+
+ln -s /usr/local/mysql/lib/mysql /usr/lib/mysql
+ln -s /usr/local/mysql/include/mysql /usr/include/mysql
+mkdir /var/lib/mysql
+ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock
+mysql_secure_installation
+
+reboot
+</pre>
+
+<pre data-language="javascript">
+/*
+* javascript
+* 高亮测试
+*/
+
+grade = (student, period=(if b? then 7 else 6)) ->
+  if student.excellentWork
+    "A+"
+  else if student.okayStuff
+    if student.triedHard then "B" else "B-"
+  else
+    "C"
+
+class Animal extends Being
+  constructor: (@name) ->
+
+  move: (meters) ->
+    alert @name + " moved #{meters}m."
+
+//var test = document.getElementById('test');
+if(demo=1){
+    var test = new Array();
+    var reg = /\b([a-z]+) \1\b/gi
+}
+require('plugins::highlight',function(highlight){
+    var test = document.getElementById('test');
+    var code = test.innerHTML
+    highlight({
+        element:test,
+        style:'{light}',
+        font:'font-size:14px; font-family:Consolas,Microsoft YaHei ',
+        language:'javascript'
+    })  
+})
+
+</pre>
+
+
+<pre data-language="php">
+&lt;?php
+/*
+ * PHP
+ * 高亮测试
+ */
+
+function do_upload($upload_dir,$upload_url)
+{
+    $temp_name = $_files[ 'userfile '][ 'tmp_name '].100;
+    $file_name = $_files[ 'userfile '][ 'name '];
+    $file_name = str_replace( &quot;\ &quot;, &quot; &quot;,$file_name);
+    $file_name = str_replace( &quot; ' &quot;, &quot; &quot;,$file_name);
+    $file_path = $upload_dir.$file_name;
+    $thistime=explode( &quot;- &quot;,date( &quot;y-m-d-h-i-s &quot;));
+    $thistime=mktime();
+    $filename=$thistime.substr($file_name,strrpos($file_name, &quot;. &quot;));
+    //文件名检查
+    if($file_name = ' ')
+    {
+        echo &quot;文件名无效.&quot;;
+        exit;
+    }
+    if(@move_uploaded_file($_files[ 'userfile '][ 'tmp_name '],$upload_dir.$filename))
+    {
+        echo &quot;上传成功.&quot;;
+        echo '&lt;meta http-equiv=&quot;refresh &quot; content=&quot;1;url=www.aimeige.com.cn.php&quot;&gt;';
+        exit;
+    }else
+    {
+        echo &quot;上传失败.&quot;;
+        echo '&lt;meta http-equiv=&quot;refresh &quot; content=&quot;1;url=www.zhutiai.com.php&quot;&gt;';
+        exit;
+    }
+    echo &quot;end&quot;;
+}
+?&gt;
+</pre>
+
+<pre data-language="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;!-- 
+html
+高亮测试
+--&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;无标题文档&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot; /&gt;
+&lt;script src=&quot;test.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 内联 css --&gt;
+&lt;style&gt;
+* {
+    margin:10px;
+}
+body {
+    font:14px/16px Consolas,Microsoft YaHei;
+    border-top:solid 5px #A04334;
+    background:url(test.jpg);
+}
+.class {
+    white-space:pre-wrap;
+}
+#id{
+    white-space:pre-wrap;
+}
+input[type=text]{
+    border:none !important;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;test&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  /*
+  highlight({
+    element:test,
+    style:'light',
+    font:'font-size:14px; font-family:Consolas,Microsoft YaHei ',
+    language:'javascript'
+  })
+  */
+
+  //var test = document.getElementById('test');
+  require('plugins::highlight',function(highlight){
+    var test = document.getElementById('test');
+    var code = test.innerHTML
+    highlight({
+        element:test,
+        style:'{light}',
+        font:'font-size:14px; font-family:Consolas,Microsoft YaHei ',
+        language:'javascript'
+    })  
+})
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<pre data-language="css">
+/*
+ * css
+ * 高亮测试
+ */
+ 
+* {
+    margin:10px;
+}
+body {
+    font:14px/16px Consolas,Microsoft YaHei;
+    border-top:solid 5px #A04334;
+    background:url(test.jpg);
+}
+.class {
+    white-space:pre-wrap;
+}
+#id{
+    white-space:pre-wrap;
+}
+input[type=text]{
+    border:none !important;
+}
+</pre>
+</div>
+<div class="set" id="btn">
+    <div id="light"></div>
+    <div id="gray"></div>
+    <div id="blue"></div>
+    <div id="red"></div>
+    <div id="dark"></div>
+</div>
+<script src="../src/highlight.full.main.js" ></script>
+<script>
+var hl = highlight.init()
+	
+var btn=document.getElementById('btn').getElementsByTagName('div');
+for(var i=0,len=btn.length;i<len;i++){
+	btn[i].onclick = function(){
+		hl.setTheme(this.id)
+	}
+}	
+</script>
+</body>
+</html>
