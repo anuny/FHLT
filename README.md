@@ -35,6 +35,6 @@ hl.setTheme('dark')
 ```
 
 
-## [查看演示](./doc/validator.md)
+## [查看演示](https://anuny.github.io/FHLT/)
 
 
