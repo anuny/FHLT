@@ -1,13 +1,13 @@
 前端轻量化代码高亮插件
 =====================
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)
+
 
 > 压缩后18KB,Gip压缩后
 > 已扩展语言：`Apache`，`Css`，`Html`，`Java`，`Javascript`，`Json`，`Markdown`，`Php`，`Shell`，`Sql`
 > 已扩展主题：`light`，`gray`，`blue`，`red`，`dark`
 > 语言可自行扩展，主题可自行扩展
 
-## 使用
+## 使用 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)
 
 前端模块化管理,移除了模块的url加载处理,简化了模块的调用。[文档](./doc/validator.md)  [源码](./doc/validator.md)  `5kb`
 ```javascript 
