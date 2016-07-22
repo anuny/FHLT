@@ -2,7 +2,7 @@
 =====================
 
 
-> 压缩后18KB,Gip压缩后8KB
+> Uglify `18KB`, Gzip `8KB`
 
 > 已扩展语言：`Apache`，`Css`，`Html`，`Java`，`Javascript`，`Json`，`Markdown`，`Php`，`Shell`，`Sql`
 
