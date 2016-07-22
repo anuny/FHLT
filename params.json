@@ -1,0 +1,6 @@
+{
+  "name": "Fhlt",
+  "tagline": "前段代码高亮",
+  "body": "前端轻量化代码高亮插件\r\n=====================\r\n\r\n\r\n> 压缩后18KB,Gip压缩后\r\n\r\n> 已扩展语言：`Apache`，`Css`，`Html`，`Java`，`Javascript`，`Json`，`Markdown`，`Php`，`Shell`，`Sql`\r\n\r\n> 已扩展主题：`light`，`gray`，`blue`，`red`，`dark`\r\n\r\n> 语言可自行扩展，主题可自行扩展\r\n\r\n## 使用 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)\r\n\r\n\r\n```javascript \r\n\r\n// 简单使用\r\nhighlight.init();\r\n\r\n// 自定义参数\r\nvar hl = highlight.init({\r\n\telement:'pre', //代码元素名称\r\n\theight:500,    //代码最小高度(number|'auto')\r\n\twidth:500,     //代码宽度(number|'auto')\r\n\tclsName:'HL',  // 高亮样式前缀\r\n\ttheme:'light', // 默认主题\r\n\tlineNum:true,  // 是否显示行号\r\n\twrap:true      // 是否自动换行\r\n})\r\n\r\n// 切换主题\r\nhl.setTheme('dark')\r\n\r\n```\r\n\r\n\r\n## [查看演示](./doc/validator.md)\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
