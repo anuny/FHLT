@@ -10,6 +10,8 @@
 
 > 语言可自行扩展，主题可自行扩展
 
+> [查看演示](https://anuny.github.io/FHLT/)
+
 ## 使用 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE)
 
 
@@ -33,8 +35,3 @@ var hl = highlight.init({
 hl.setTheme('dark')
 
 ```
-
-
-## [查看演示](https://anuny.github.io/FHLT/)
-
-
