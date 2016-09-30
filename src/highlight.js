@@ -270,25 +270,26 @@
 				wrap = theme[i].WARP,
 				ol = theme[i].OL_SPA,
 				hasLine = theme[i].OL_LINE,
-				li = theme[i].OL_LIST;
-				sty =prefix+'{'+pre+'}'+
-					 prefix+':before{'+before+'}'+
-					 prefix+'-wrap{'+wrap+'}'+
-					 prefix+' ol{'+ol+'}'+
-					 prefix+'-hasLine ol{'+hasLine+'}'+
-					 prefix+' ol li{'+li+'}'
+				li = theme[i].OL_LIST,
+				im='!important';
+				sty =prefix+'{'+pre+im+'}'+
+					 prefix+':before{'+before+im+'}'+
+					 prefix+'-wrap{'+wrap+im+'}'+
+					 prefix+' ol{'+ol+im+'}'+
+					 prefix+'-hasLine ol{'+hasLine+im+'}'+
+					 prefix+' ol li{'+li+im+'}'
 				break;
 				case 'main':
-				sty = prefix+'{'+theme[i]+'}'
+				sty = prefix+'{'+theme[i]+im+'}'
 				break;
 				case 'before':
-				sty = prefix+':before{'+theme[i]+'}'
+				sty = prefix+':before{'+theme[i]+im+'}'
 				break;
 				case 'list':
-				sty = prefix+' ol li{'+theme[i]+'}'
+				sty = prefix+' ol li{'+theme[i]+im+'}'
 				break;
 				default:
-				sty = prefix+' .'+i+'{'+theme[i]+'}'
+				sty = prefix+' .'+i+'{'+theme[i]+im+'}'
 			}
 			style+=sty;
 		};
@@ -311,6 +312,7 @@
 	// 实例化
 	highlight.init = function (options)
 	{
+		
 		var element = options.element||'pre',
 			clsName = options.clsName||'FHLT',
 			height  = options.height||'auto',
@@ -318,6 +320,7 @@
 		    theme   = options.theme || 'light',
 		    wrap    = options.wrap || false,
 		    lineNum = options.lineNum || false;
+			
 		highlight.addOptions({element:element,clsName:clsName,height:height,width:width,theme:theme,wrap:wrap,lineNum:lineNum})
 		highlight(element,height,width,lineNum,wrap,clsName);
 		var style = highlight.extendThemes(highlight.options.themes,clsName,theme,element);
